@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "594734594975",
+    "firebase_url": "https://netcad-task.firebaseio.com",
+    "project_id": "netcad-task",
+    "storage_bucket": "netcad-task.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:594734594975:android:5fddb5649ba8934c2adbaa",
+        "android_client_info": {
+          "package_name": "com.example.flutter_firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "594734594975-csg1nfdfe5bros63phbut414qnrk9fpm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSPtjJI1inMorI7OTohixgghLfDXSvm84"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "594734594975-csg1nfdfe5bros63phbut414qnrk9fpm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
