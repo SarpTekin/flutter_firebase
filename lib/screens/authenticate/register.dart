@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_firebase/services/auth.dart';
-import 'package:flutter_firebase/services/auth.dart';
+
 
 class Register extends StatefulWidget {
 
@@ -49,17 +49,41 @@ class _RegisterState extends State<Register> {
             children: <Widget>[
               SizedBox(height: 20.0),
               TextFormField(
+                decoration: InputDecoration(
+                  hintText: 'Email',
+                  fillColor: Colors.white,
+                  filled:true,
+                  enabledBorder: OutlineInputBorder(
+                    borderSide:BorderSide(color: Colors.white, width: 2.0)
+                     ),
+                     focusedBorder: OutlineInputBorder(
+                       borderSide: BorderSide(color: Colors.pink, width: 2.0) )
+                     ),
                 validator: (val) => val.isEmpty ? 'Enter an email' : null,
                 onChanged: (val){
-                  setState(()=> email = val.trim());
+                  setState(() => email = val.trim());
+                  
 
                 } ,),
               SizedBox(height: 20.0),
               TextFormField(
+                decoration: InputDecoration(
+                  hintText: 'Password',
+                  fillColor: Colors.white,
+                  filled:true,
+                  enabledBorder: OutlineInputBorder(
+                    borderSide:BorderSide(color: Colors.white, width: 2.0)
+                     ),
+                     focusedBorder: OutlineInputBorder(
+                       borderSide: BorderSide(color: Colors.pink, width: 2.0)
+                        ),
+                        ),
                 obscureText: true,
                 validator: (val) => val.length < 6 ? 'Enter a password with more than 6 chars' : null,
                 onChanged: (val){
-                  setState(()=> password = val.trim());
+                  setState(() => password = val.trim());
+                
+                  
                   
                 }
                  ),
@@ -75,13 +99,15 @@ class _RegisterState extends State<Register> {
                      if(_formkey.currentState.validate()){
                        dynamic result = await _auth.registeredWithEmailAndPassword(email, password);
                        if(result == null){
-                         setState(()=> error = 'Invalid email');
+                         setState((){
+                           error = 'Please use a valid email';
+                         });
                        }
 
                      }
 
 
-                   },
+                   }
                  ),
                  SizedBox(height: 12.0),
                  Text(
